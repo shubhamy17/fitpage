@@ -1,0 +1,45 @@
+.card {
+  width: 100%;
+  min-width: 420px;
+  padding: 15px;
+  margin: auto;
+  background-color: #01131B;
+  color: white;
+  min-height:300px;
+  }
+  
+  .card-header {
+    min-height: 60px;
+    background-color: #1686b0;
+    padding: 10px
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .card-tag {
+    padding: 2px 4px;
+    color: #fff;
+    font-size: 10px;
+  }
+  
+  .card-tag.green {
+    color: #42b72a;
+  }
+  
+  .card-tag.red {
+    color: #ff4842;
+   
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .criterion {
+    margin-bottom: 8px;
+  }
+  

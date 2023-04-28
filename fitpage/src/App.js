@@ -1,22 +1,26 @@
-import './App.css';
-import  stocks from "./data.json"
+import "./App.css";
+import Home from "./home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Card from "./component/card";
+import stocks from "./data.json";
+
 function App() {
   return (
-    <div className="App">
-       {stocks.map((stock) => (
-        <div key={stock.id}>
-          <ul><li><div>{stock.name}</div> <div className={`card-tag ${stock.color}`} >{stock.tag}</div></li></ul>
-        
-        </div>
-      ))}
-      
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home stocks={stocks}/>}
+          />
+          <Route
+            path="/details/:id"
+            element={<Card stocks={stocks}/>}
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
 export default App;
-
-
-
-
-
