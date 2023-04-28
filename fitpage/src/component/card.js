@@ -1,8 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./card.css";
 import { groupBy } from "../helper";
+import Value from "./value"
+
 
 const Card = ({ stocks }) => {
   const { id } = useParams();
@@ -29,11 +31,11 @@ const Card = ({ stocks }) => {
               {index===data.criteria.length-1 ? null:<p style={{fontSize:"8px"}}>and</p> }
               </>
             ) : (
-                <p>
-                {/* {criterion.text.replace(
+                <p style={{fontSize:"15px"}}>
+                {criterion.text.replace(
                   /\$(\d)/g,
-                  (_, number) => criterion.variable[`$${number}`].type==="value" ?  criterion.variable[`$${number}`]?.values?.map((el)=>console.log("eeeeee",el)) :null
-                )} */}
+                  (_, number) => criterion.variable[`$${number}`].type==="value" ?criterion.variable[`$${number}`].values[0]:  criterion.variable[`$${number}`].default_value
+                )}
               </p>
             )}
           </div>
