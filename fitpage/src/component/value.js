@@ -1,10 +1,20 @@
-import React from 'react';
+import React from "react";
+import "../App.css";
+import { useLocation } from "react-router";
 
-const Value= ({ item }) => {
+const Value = () => {
+  let location = useLocation();
   return (
-    <>
-      Test value comp
-    </>
+    <div className="App">
+      {/* Map over the values and display them in a list */}
+      {location.state.value.map((elm, index) => (
+        <div key={index}>
+          <ul>
+            <li>{elm}</li>
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 };
 
