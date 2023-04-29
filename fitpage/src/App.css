@@ -82,10 +82,37 @@ body{
   color: #61dafb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 768px) {
+  .App {
+    min-width: auto;
   }
+  .card-tag {
+    font-size: 8px;
+  }
+  .card-title {
+    font-size: 16px;
+  }
+  
+  .card-tag {
+    font-size: 8px;
+  }
+
+}
+
+/* Styles for screens with width between 769px and 1200px */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .App {
+    min-width: 320px;
+  }
+   
+  .card-title {
+    font-size: 18px;
+  }
+  
+  .card-tag {
+    font-size: 10px;
+  }
+  
 }
 
 @keyframes App-logo-spin {
