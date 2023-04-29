@@ -2,11 +2,19 @@ import "./App.css";
 import Home from "./home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Card from "./component/card";
-import stocks from "./data.json";
 import Indicator from "./component/indicator";
 import Value from "./component/value";
+import {getStockData} from "./helper"
+import { useEffect, useState } from "react";
 
 function App() {
+  let [stocks,setStocks]=useState([]);
+  useEffect(()=>{
+    getStockData().then((res)=>{
+      setStocks(res.data)
+    })
+  },[])
+  
   return (
     <>
       <BrowserRouter>
