@@ -42,7 +42,7 @@ const Card = ({ stocks }) => {
             <React.Fragment key={elm}>
               <Link
                 to="/details/indicator"
-                 state= {{ default_value: variables[elm].default_value }}
+                 state= {{ data: variables[elm] }}
               >
                 ({variables[elm].default_value})
               </Link>

@@ -26,6 +26,32 @@ li{
 .card-tag.red {
 color: #ff4842;
 }
+.indicator-header {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.indicator-sub-header {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.indicator-variable-section {
+  background-color: #fff;
+  min-height: 60px;
+  font-size: 14px;
+  padding: 10px;
+}
+.left {
+  float: left;
+  display: inline-block;
+  color:black
+}
+.right {
+  float: right;
+  display: inline-block;
+}
 body{
     display: flex;
     -ms-flex-align: center;
