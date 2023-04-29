@@ -20,7 +20,7 @@ const Card = ({ stocks }) => {
   let getValue = (criterion) => {
     const variables = criterion.variable;
     let array = [];
-    criterion.text.split(" ").map((elm) => {
+    criterion?.text?.split(" ").map((elm) => {
       if (elm.includes("$")) {
         // If the variable is a value, create a link to the param details page
         if (variables[elm].type === "value") {
@@ -57,11 +57,11 @@ const Card = ({ stocks }) => {
     });
      // Return an array of elements as a paragraph with each element separated by a space
     return (
-      <p>
-        {array.map((elm) => {
-          return <span> {elm} </span>;
+      <span>
+        {array.map((elm,index) => {
+          return <span key={elm+index}> {elm} </span>;
         })}
-      </p>
+      </span>
     );
   };
 
